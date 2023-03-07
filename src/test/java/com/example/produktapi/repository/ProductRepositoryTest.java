@@ -94,12 +94,12 @@ class ProductRepositoryTest {
     void findNoDuplicatedCategory_givenListOfValidCategoriesAndRestrictDuplicates_whenUsingFindAllCategories_thenReturnAllFourCategorys(){
 
         //given
-        List <String> actualCategories = new ArrayList<>(Arrays.asList("electronics","jewelery", "men's clothing,", "women's clothing")); //fail electornics
+        List <String> actualCategories = new ArrayList<>(Arrays.asList("electronics","jewelery", "men's clothing", "women's clothing")); //fail electornics
         actualCategories.stream().distinct().collect(Collectors.toList());
         //when
         List <String> listProducts = undertest.findAllCategories();
         //then
-        assertFalse(listProducts.size()>4);  //Kollar antalet kateforier - fail annat än 4
+        assertTrue(listProducts.size()==4);  //Kollar antalet kateforier - fail annat än 4
         assertEquals(actualCategories,listProducts); //kollar om categories är duplicerade
 
     }

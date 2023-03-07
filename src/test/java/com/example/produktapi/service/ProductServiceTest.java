@@ -164,7 +164,7 @@ class ProductServiceTest {
 
         verify(repository, times(1)).findByTitle(title); // success
         verify(repository, times(0)).save(any()); // times() kan bytas till never()
-        assertEquals("En produkt med titeln: Vår test-titel finns redan", exception.getMessage());
+        assertEquals("En produkt med titeln: test-titel finns redan", exception.getMessage());
     }
 
     @Test //update product - normalflöde
