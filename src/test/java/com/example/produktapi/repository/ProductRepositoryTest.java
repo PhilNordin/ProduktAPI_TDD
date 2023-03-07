@@ -19,14 +19,13 @@ class ProductRepositoryTest {
     @Test
     void testingOurRepository(){
         List <Product> products = undertest.findAll();
-        Assertions.assertFalse(products.isEmpty()); // True = fel
+        Assertions.assertFalse(products.isEmpty()); //True = fel
     }
 
-    @Test //find by category test 1
+    @Test //find by category test 1 - testar söka efter kategori "balls" och om den är empty = false
     void findByCategory_givenValidCategory_whenSearchingInFindByCategory_thenReturnProductsInSpecificCategory() {
 
         //given
-        String category = "balls";
         Product product = new Product("fotboll", 100.0, "balls", "rund","bild");
         undertest.save(product);
 
@@ -37,7 +36,7 @@ class ProductRepositoryTest {
 
     }
 
-    @Test
+    @Test  //find by category test 2 - testar söka efter kategori som inte finns pga .deleteAll();
     void findByNonExistingCategory_givenDeleteAll_whenFindByCategory_thenCheckCategoryIsEmpty(){
         //given
         undertest.deleteAll();
