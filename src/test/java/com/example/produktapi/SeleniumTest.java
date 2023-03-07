@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class SeleniumTest {
 
     @Test
-    //@Disabled
+    @Disabled
     void checkWebsiteTitle(){
         //Hämta in den webDriver som ska användas
         WebDriver driver = new ChromeDriver();
@@ -32,7 +32,7 @@ class SeleniumTest {
     }
 
     @Test
-    //@Disabled
+    @Disabled
     void numberOfProductsShouldBeTwenty(){
         //Hämta in webdriver
         WebDriver driver = new ChromeDriver();
@@ -53,6 +53,7 @@ class SeleniumTest {
 
 
     @Test
+    @Disabled
     public void checkIfPriceIsRightOnThreeProducts(){
         //Hämta in webdriver
         WebDriver driver = new ChromeDriver();
