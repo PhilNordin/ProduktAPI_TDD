@@ -25,7 +25,7 @@ import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 class ProductServiceTest {
-    @Mock //För att matcha mot DB?
+    @Mock //För att matcha mot DB??
     private ProductRepository repository;
 
     @InjectMocks //En underklass av orginalet
